@@ -71,6 +71,9 @@ def package(source_dir, version, output_dir):
     bootstrapper = UPDATER / "WebView2Bootstrapper.exe"
     if bootstrapper.exists():
         shutil.copy2(bootstrapper, source / "WebView2Bootstrapper.exe")
+    readme = UPDATER / "KURULUM.txt"
+    if readme.exists():
+        shutil.copy2(readme, source / "KURULUM.txt")
     (source / "version.json").write_text(
         json.dumps({"version": version}, ensure_ascii=False, indent=2), encoding="utf-8"
     )
