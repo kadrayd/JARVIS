@@ -92,7 +92,7 @@ def load_manifest(force=False):
     if not force and State.manifest_cache and now - State.manifest_time < CACHE_SECONDS:
         return State.manifest_cache
     errors = []
-    for url in (MANIFEST_URL, API_URL):
+    for url in (API_URL, MANIFEST_URL):
         try:
             data, final = fetch(url)
             if not safe_host(final):
