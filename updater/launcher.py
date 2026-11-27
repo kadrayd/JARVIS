@@ -112,6 +112,21 @@ def start_updater(app_dir, flags):
         log(app_dir, "Güncelleyici başlatıldı")
 
 
+def start_vision(app_dir, flags):
+    source = app_dir / "JARVISVision.exe"
+    if not source.exists():
+        log(app_dir, "JARVISVision.exe bulunamadı")
+        return
+    subprocess.Popen(
+        [str(source), "--service"],
+        cwd=str(app_dir),
+        creationflags=flags,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    log(app_dir, "Kamera hareket servisi başlatıldı")
+
+
 def main():
     app_dir = Path(sys.executable).resolve().parent
     try:
@@ -145,6 +160,7 @@ def main():
             stderr=subprocess.DEVNULL,
         )
         start_updater(app_dir, flags)
+        start_vision(app_dir, flags)
         time.sleep(5)
         if process.poll() is None:
             (app_dir / "launch-ok.flag").write_text(str(time.time()), encoding="utf-8")

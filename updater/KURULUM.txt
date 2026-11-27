@@ -1,11 +1,14 @@
-JARVIS 3.2 KURULUM
+JARVIS 3.3 KURULUM
 
 1. Zip dosyasını bir klasöre çıkarın.
-2. JARVIS 3.2.exe (veya setup.exe) dosyasını çalıştırın. Uygulama kendiliğinden açılır.
+2. JARVIS 3.3.exe (veya setup.exe) dosyasını çalıştırın. Uygulama kendiliğinden açılır.
    İndirilen dosyalardaki internet işareti otomatik kaldırılır; JARVIS-Core.exe'yi doğrudan çalıştırmayın.
 3. İlk açılışta API anahtarınızı girin. Bu pakette hiçbir anahtar bulunmaz.
 4. WebView2 Runtime eksikse setup.exe bunu otomatik kurar.
 5. Windows "Windows protected your PC" uyarısı çıkarsa Diğer bilgiler > Yine de çalıştır'ı seçin.
+
+Kamera / hareket: Ayarlar > Hakkında > KAMERA / HAREKET satırından açılıp kapatılır. Hareket algılanınca HUD üzerinde uyarı görünür.
+Kamera görüntüsü hiçbir yere gönderilmez; yalnızca yerel olarak kareler arası fark hesaplanır.
 
 Güncelleme: Ayarlar > Hakkında > GÜNCELLEME > GÜNCELLE düğmesi.
 

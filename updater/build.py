@@ -15,6 +15,7 @@ def build_exes():
     specs = [
         (UPDATER / "updater_service.py", "JARVISUpdater"),
         (UPDATER / "launcher.py", "setup"),
+        (UPDATER / "vision_service.py", "JARVISVision"),
     ]
     for source, name in specs:
         command = [
@@ -67,6 +68,7 @@ def package(source_dir, version, output_dir):
     out.mkdir(parents=True, exist_ok=True)
     dist = UPDATER / "build" / "dist"
     shutil.copy2(dist / "JARVISUpdater.exe", source / "JARVISUpdater.exe")
+    shutil.copy2(dist / "JARVISVision.exe", source / "JARVISVision.exe")
     shutil.copy2(dist / "setup.exe", source / "setup.exe")
     bootstrapper = UPDATER / "WebView2Bootstrapper.exe"
     if bootstrapper.exists():
@@ -90,7 +92,7 @@ def package(source_dir, version, output_dir):
         + version
         + ".zip",
         "sha256": sha256(archive),
-        "notes": "JARVIS " + version + " - uygulama içi güncelleme sistemi",
+        "notes": "JARVIS " + version + " - kamera hareket algılama ve uygulama içi güncelleme",
     }
     (out / "updates.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
@@ -102,7 +104,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--build", action="store_true")
     parser.add_argument("--source", default="")
-    parser.add_argument("--version", default="3.2.0")
+    parser.add_argument("--version", default="3.3.0")
     parser.add_argument("--output", default=str(ROOT / "release"))
     args = parser.parse_args()
     if args.build:

@@ -220,7 +220,7 @@ def next_target(version):
 
 def prepare_target(target, version):
     write_current(target, version)
-    for name in ("setup.exe", "JARVISUpdater.exe", "WebView2Bootstrapper.exe"):
+    for name in ("setup.exe", "JARVISUpdater.exe", "JARVISVision.exe", "WebView2Bootstrapper.exe"):
         if not (target / name).exists():
             source = State.app_dir / name
             if source.exists():
