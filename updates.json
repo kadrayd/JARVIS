@@ -1,6 +1,6 @@
 {
-  "version": "3.3.0",
-  "url": "https://github.com/kadrayd/JARVIS/releases/download/v3.3.0/JARVIS-3.3.0.zip",
-  "sha256": "54cf74d8da3f89045149ef50fb0d6ab0c590284047c074fe0087b612a702a40a",
-  "notes": "JARVIS 3.3.0 - kamera hareket takibi, uygulama içi güncelleme, kodsuz paket"
+  "version": "3.3.1",
+  "url": "https://github.com/kadrayd/JARVIS/releases/download/v3.3.1/JARVIS-3.3.1.zip",
+  "sha256": "c1cf9d91d6b6b3ba4c222fd2079375038bec2477e9274e60eac4b42fb7b035f8",
+  "notes": "JARVIS 3.3.1 - kamera hareket takibi, uygulama içi güncelleme, kodsuz paket"
 }

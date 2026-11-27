@@ -4,14 +4,14 @@ Independent JARVIS Desktop Application
 
 ## İndirme
 
-En son sürüm: **3.3.0**
+En son sürüm: **3.3.1**
 
-[JARVIS-3.3.0.zip İndir](https://github.com/kadrayd/JARVIS/releases/download/v3.3.0/JARVIS-3.3.0.zip)
+[JARVIS-3.3.1.zip İndir](https://github.com/kadrayd/JARVIS/releases/download/v3.3.1/JARVIS-3.3.1.zip)
 
-Zip'i açıp `JARVIS 3.3.exe` (veya `setup.exe`) dosyasını çalıştırın. Uygulama, güncelleyici ve kamera hareket servisi kendiliğinden başlar; harici bir sayfa veya sekme açılmaz. İndirilen dosyalardaki internet işareti otomatik kaldırılır; `JARVIS-Core.exe` doğrudan çalıştırılmaz.
+Zip'i açıp `JARVIS 3.3.1.exe` (veya `setup.exe`) dosyasını çalıştırın. Uygulama, güncelleyici ve kamera hareket servisi kendiliğinden başlar; harici bir sayfa veya sekme açılmaz. İndirilen dosyalardaki internet işareti otomatik kaldırılır; `JARVIS-Core.exe` doğrudan çalıştırılmaz.
 
 ## Kamera / hareket
-`Ayarlar › Hakkında › KAMERA / HAREKET` satırından kamerayı açıp kapatabilirsiniz. Hareket algılandığında JARVIS halkası ve nişangah hareketin yönünü takip eder; yön sağa/sola/yukarı/aşağı olarak gösterilir. Görüntü hiçbir yere gönderilmez; kareler arası fark yalnızca yerel olarak hesaplanır.
+Kamerayı sağ üstteki **KAMERA** düğmesinden açıp kapatabilirsiniz. Hareket algılandığında JARVIS halkası ve nişangah hareketin yönünü takip eder; yön sağa/sola/yukarı/aşağı olarak gösterilir. Görüntü hiçbir yere gönderilmez; kareler arası fark yalnızca yerel olarak hesaplanır.
 
 ## Uygulama içi güncelleme
 

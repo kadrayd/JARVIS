@@ -1,14 +1,13 @@
-JARVIS 3.3 KURULUM
+JARVIS 3.3.1 KURULUM
 
 1. Zip dosyasını bir klasöre çıkarın.
-2. JARVIS 3.3.exe (veya setup.exe) dosyasını çalıştırın. Uygulama kendiliğinden açılır.
+2. JARVIS 3.3.1.exe (veya setup.exe) dosyasını çalıştırın. Uygulama kendiliğinden açılır.
    İndirilen dosyalardaki internet işareti otomatik kaldırılır; JARVIS-Core.exe'yi doğrudan çalıştırmayın.
 3. İlk açılışta API anahtarınızı girin. Bu pakette hiçbir anahtar bulunmaz.
 4. WebView2 Runtime eksikse setup.exe bunu otomatik kurar.
 5. Windows "Windows protected your PC" uyarısı çıkarsa Diğer bilgiler > Yine de çalıştır'ı seçin.
 
-Kamera / hareket: Ayarlar > Hakkında > KAMERA / HAREKET satırından açılıp kapatılır. Hareket algılanınca JARVIS halkası ve nişangah hareketin yönünü takip eder.
-Kamera görüntüsü hiçbir yere gönderilmez; yalnızca yerel olarak kareler arası fark hesaplanır.
+Kamera: Sağ üstteki KAMERA düğmesiyle açılıp kapanır. Hareket algılanınca JARVIS halkası ve nişangah hareketin yönünü takip eder. Kamera görüntüsü hiçbir yere gönderilmez; kareler arası fark yalnızca yerel olarak hesaplanır.
 Pakette uygulama kaynak kodu bulunmaz; yalnızca çalıştırılabilir dosyalar ve gerekli çalışma zamanı dosyaları vardır.
 
 Güncelleme: Ayarlar > Hakkında > GÜNCELLEME > GÜNCELLE düğmesi.
