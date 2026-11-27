@@ -271,7 +271,7 @@ def kill_old(app_dir):
             if not process.info["exe"] or process.pid == os.getpid():
                 continue
             executable = Path(process.info["exe"]).resolve()
-            if root in executable.parents and re.match(r"^JARVIS .*\.exe$", executable.name, re.I):
+            if root in executable.parents and re.match(r"^JARVIS[ -].*\.exe$", executable.name, re.I):
                 targets.append(process)
         except Exception:
             pass
@@ -312,7 +312,7 @@ def cleanup(old_dir, new_dir):
             if item.resolve() == new_dir.resolve():
                 continue
             if item.is_dir() and item.name.lower().startswith("jarvis"):
-                if next(item.glob("JARVIS *.exe"), None) is not None:
+                if next(item.glob("JARVIS*.exe"), None) is not None:
                     remove_tree(item)
             elif item.is_file() and re.match(r"^JARVIS.*\.exe$", item.name, re.I):
                 item.unlink()

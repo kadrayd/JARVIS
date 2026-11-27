@@ -8,7 +8,7 @@ En son sürüm: **3.2.0**
 
 [JARVIS-3.2.0.zip İndir](https://github.com/kadrayd/JARVIS/releases/download/v3.2.0/JARVIS-3.2.0.zip)
 
-Zip'i açıp `setup.exe` dosyasını çalıştırın. Uygulama ve güncelleyici kendiliğinden başlar; harici bir sayfa veya sekme açılmaz.
+Zip'i açıp `JARVIS 3.2.exe` (veya `setup.exe`) dosyasını çalıştırın. Uygulama ve güncelleyici kendiliğinden başlar; harici bir sayfa veya sekme açılmaz. İndirilen dosyalardaki internet işareti otomatik kaldırılır; `JARVIS-Core.exe` doğrudan çalıştırılmaz.
 
 ## Uygulama içi güncelleme
 

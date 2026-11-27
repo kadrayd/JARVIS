@@ -12,6 +12,17 @@ CERT_ID = "{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}"
 LOG_NAME = "launcher.log"
 
 
+def unblock_folder(folder):
+    count = 0
+    for item in folder.rglob("*"):
+        if not item.is_file():
+            continue
+        stream = "\\\\?\\" + str(item) + ":Zone.Identifier"
+        if ctypes.windll.kernel32.DeleteFileW(stream):
+            count += 1
+    return count
+
+
 def log(folder, message):
     try:
         with open(folder / LOG_NAME, "a", encoding="utf-8") as handle:
@@ -105,18 +116,24 @@ def main():
     app_dir = Path(sys.executable).resolve().parent
     try:
         log(app_dir, "Başlatılıyor: " + str(app_dir))
+        blocked = unblock_folder(app_dir)
+        if blocked:
+            log(app_dir, "İnternet işaretleri kaldırıldı: " + str(blocked))
         if not ensure_webview2(app_dir):
             return 1
-        executable = next(
-            (
-                item
-                for item in app_dir.glob("JARVIS *.exe")
-                if not item.name.lower().startswith(("setup", "jarvisupdater"))
-            ),
-            None,
-        )
+        executable = app_dir / "JARVIS-Core.exe"
+        if not executable.exists():
+            executable = next(
+                (
+                    item
+                    for item in app_dir.glob("JARVIS*.exe")
+                    if item.resolve() != Path(sys.executable).resolve()
+                    and not item.name.lower().startswith(("setup", "jarvisupdater", "webview2"))
+                ),
+                None,
+            )
         if executable is None:
-            alert("JARVIS", "Uygulama dosyası bulunamadı: JARVIS *.exe")
+            alert("JARVIS", "Uygulama dosyası bulunamadı: JARVIS-Core.exe")
             return 1
         log(app_dir, "Uygulama: " + executable.name)
         flags = subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.DETACHED_PROCESS
